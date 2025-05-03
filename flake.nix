@@ -6,7 +6,7 @@
     in
     {
 
-      packages.aarch64-linux.tree = nixpkgs.legacyPackages.x86_64-linux.tree;
+      packages.aarch64-linux.tree = nixpkgs.legacyPackages.aarch64-linux.tree;
 
       defaultPackage.aarch64-linux = self.packages.aarch64-linux.tree;
 
