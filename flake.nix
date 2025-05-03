@@ -2,13 +2,13 @@
   description = "A very basic flake";
 
   outputs = { self, nixpkgs }:
-    let pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    let pkgs = nixpkgs.legacyPackages.aarch64-linux;
     in
     {
 
-      packages.x86_64-linux.tree = nixpkgs.legacyPackages.x86_64-linux.tree;
+      packages.aarch64-linux.tree = nixpkgs.legacyPackages.x86_64-linux.tree;
 
-      defaultPackage.x86_64-linux = self.packages.x86_64-linux.tree;
+      defaultPackage.aarch64-linux = self.packages.aarch64-linux.tree;
 
       hydraJobs."tester2" = self.defaultPackage;
       hydraJobs."tester" = self.defaultPackage;
